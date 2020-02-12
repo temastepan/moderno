@@ -201,6 +201,7 @@ background-color: $grey;
   &-author{
     display: flex;
     align-items: center;
+    max-width: 245px;
     .avatar{
       width: 30px;
       height: 30px;
@@ -213,8 +214,13 @@ background-color: $grey;
     span{
       font-size: 14px;
       font-weight: 500;
+    }    
+  }
+  &-star{
+    font-size: 12px;
+    span{
+      color: $bg;
     }
-    
   }
 }
 .products__bottom-btn{  
@@ -233,8 +239,34 @@ background-color: $grey;
   }
   }
 }
-
-
-
-
 // END PRODUCTS
+
+// START SLIDER
+.product-slider{
+  padding: 110px 0px 120px;
+  .slick-dots{
+    text-align: center;
+    margin-top: 50px;
+    li{
+    display: inline-block;
+    margin-left: 3px;
+    margin-right: 3px;
+    &.slick-active{
+      button{
+        background-color: $green;
+      }
+    }
+    button{
+      border-radius: 50%;
+      background-color: rgb(232, 232, 232);
+      border: none;
+      font-size: 0;
+      width: 16px;
+      height: 16px;
+      cursor: pointer;
+      outline: none;
+    } 
+    }    
+  }
+}
+// END SLIDER
