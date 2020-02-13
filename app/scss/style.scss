@@ -14,6 +14,7 @@
 .header__text {
   margin-left: auto;
   margin-right: 50px;
+
   span {
     color: $red;
   }
@@ -50,14 +51,17 @@
 .menu__list {
   li {
     display: inline-block;
+
     &+li {
       margin-left: 30px;
     }
+
     a {
       color: #fff;
     }
   }
 }
+
 // END HEADER
 
 // START SEARCH
@@ -73,16 +77,18 @@
   padding: 155px 0px 100px;
   color: #fff;
   text-align: center;
+
   &-title {
     margin-bottom: 10px;
     font-size: 48px;
-    font-weight: 700;
+    @include f700;
     line-height: 72px;
   }
+
   &-text {
     margin-bottom: 50px;
     font-size: 20px;
-    font-weight: 500;
+    @include f500;
     line-height: 30px;
   }
 
@@ -100,18 +106,21 @@
       height: 56px;
       border: none;
       font-size: 14px;
-      font-weight: 500;
-      padding-left: 25px; 
+      @include f500;
+      padding-left: 25px;
       padding-right: 60px;
+
       &:focus {
         border: 1px solid $red;
       }
+
       &::placeholder {
         color: #90a4ae;
-        font-weight: 500;
+        @include f500;
       }
     }
-    button{
+
+    button {
       position: absolute;
       border: none;
       background-color: transparent;
@@ -125,148 +134,259 @@
 
 // START PRODUCTS
 
-.products{
-padding: 110px 0px;
-background-color: $grey;
+.products {
+  padding: 110px 0px;
+  background-color: $grey;
 }
-.products__inner-btn{
+
+.products__inner-btn {
   text-align: center;
   margin-bottom: 60px;
-  button{
+
+  button {
     padding: 12px 21px;
     border: none;
     background-color: #fff;
     color: $bg;
     cursor: pointer;
-    & + button{
+
+    &+button {
       margin-left: 5px;
     }
-    &.mixitup-control-active{
+
+    &.mixitup-control-active {
       background-color: $red;
       color: #fff;
     }
   }
 }
-.products__inner-box{
+
+.products__inner-box {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
-.product__item{
+
+.product__item {
   max-width: 442px;
   width: 100%;
   box-shadow: 0px 1px 2px 0px rgba(205, 214, 222, 0.75);
   margin-bottom: 30px;
-  &-img{
+
+  &-img {
     min-height: 250px;
     background-repeat: no-repeat;
     display: block;
     background-position: center;
-    background-size: cover;    
+    background-size: cover;
   }
-  &-content{
+
+  &-content {
     display: flex;
     justify-content: space-between;
     padding: 10px 30px;
     align-items: center;
     min-height: 90px;
-    font-weight: 500;
+    @include f500;
     border-bottom: 1px solid #e7ecf2;
   }
-  &-name{
-     max-width: 310px;
+
+  &-name {
+    max-width: 310px;
   }
-  &-title{
-    color: $bg;        
+
+  &-title {
+    color: $bg;
     font-size: 18px;
     display: block;
   }
-  &-category{
+
+  &-category {
     font-size: 14px;
     color: $green;
     display: block;
-  }   
-  &-price{
+  }
+
+  &-price {
     font-size: 28px;
     color: $bg;
-    font-weight: 700;
+    @include f700;
   }
-  &-info{
+
+  &-info {
     display: flex;
     justify-content: space-between;
     align-items: center;
     min-height: 70px;
     padding: 18px 30px;
   }
-  &-author{
+
+  &-author {
     display: flex;
     align-items: center;
     max-width: 245px;
-    .avatar{
+
+    .avatar {
       width: 30px;
       height: 30px;
-      border-radius: 50%; 
+      border-radius: 50%;
       display: inline-block;
       background-repeat: no-repeat;
       background-size: cover;
       margin-right: 14px;
     }
-    span{
+
+    span {
       font-size: 14px;
-      font-weight: 500;
-    }    
+      @include f500;
+    }
   }
-  &-star{
+
+  &-star {
     font-size: 12px;
-    span{
+
+    span {
       color: $bg;
     }
   }
 }
-.products__bottom-btn{  
+
+.products__bottom-btn {
   text-align: center;
-  button{
-  margin: 45px 5px 0px;
-  box-shadow: 0px 1px 3px 0px rgba(204, 216, 228, 0.75);
-  border: none;
-  background-color: #fff;
-  color: $bg;
-  padding: 20px 30px;
-  cursor: pointer;
-  &.mixitup-control-active{
-    background-color: $red;
-    color: #fff;
-  }
+
+  button {
+    margin: 45px 5px 0px;
+    box-shadow: 0px 1px 3px 0px rgba(204, 216, 228, 0.75);
+    border: none;
+    background-color: #fff;
+    color: $bg;
+    padding: 20px 30px;
+    cursor: pointer;
+
+    &.mixitup-control-active {
+      background-color: $red;
+      color: #fff;
+    }
   }
 }
+
 // END PRODUCTS
 
 // START SLIDER
-.product-slider{
+.product-slider {
   padding: 110px 0px 120px;
-  .slick-dots{
+
+  .slick-dots {
     text-align: center;
     margin-top: 50px;
-    li{
-    display: inline-block;
-    margin-left: 3px;
-    margin-right: 3px;
-    &.slick-active{
-      button{
-        background-color: $green;
+
+    li {
+      display: inline-block;
+      margin-left: 3px;
+      margin-right: 3px;
+
+      &.slick-active {
+        button {
+          background-color: $green;
+        }
+      }
+
+      button {
+        border-radius: 50%;
+        background-color: rgb(232, 232, 232);
+        border: none;
+        font-size: 0;
+        width: 16px;
+        height: 16px;
+        cursor: pointer;
+        outline: none;
       }
     }
-    button{
-      border-radius: 50%;
-      background-color: rgb(232, 232, 232);
-      border: none;
-      font-size: 0;
-      width: 16px;
-      height: 16px;
-      cursor: pointer;
-      outline: none;
-    } 
-    }    
   }
 }
+
 // END SLIDER
+
+// START ADVANTAGES
+.advantages {
+  background-color: $bg;
+  padding: 110px 0;
+}
+
+.advantages__title {
+  color: #fff;
+}
+
+.advantages__inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.advantages__item {
+  max-width: 370px;
+  text-align: center;
+  padding: 0px 15px;
+
+  &:hover {
+    .advantages__item-images {
+      background-color: $green;
+      transition: all .5s;
+    }
+
+    .advantages__item-title {
+      color: $green;
+      transition: all .5s;
+    }
+
+    .advantages__item-images {
+      g{
+        fill: #fff;
+      }
+    }
+  }
+
+  &-images {
+    width: 114px;
+    height: 114px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px auto 30px;
+  }
+
+  &-title {
+    margin-bottom: 25px;
+    font-size: 24px;
+    color: #fff;
+    @include f500
+  }
+
+  &-text {
+    font-size: 15px;
+  }
+}
+
+.icosvg-1 {
+  svg {
+    width: 50px;
+  }
+
+}
+
+.icosvg-2 {
+  svg {
+    width: 70px;
+  }
+
+}
+
+.icosvg-3 {
+  svg {
+    width: 86px;
+  }
+
+}
+
+// END ADVANTAGES
