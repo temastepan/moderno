@@ -71,6 +71,15 @@
   background-size: cover;
   background-position: center;
   min-height: 533px;
+  &.page-search{
+    min-height: 230px;
+    .search__inner{
+      padding: 55px 0px 70px;
+      &-text{
+        margin-bottom: 20px;
+      }
+    }
+  }
 }
 
 .search__inner {
@@ -610,3 +619,23 @@
   }
 }
 // END FOOTER
+
+// START NEW-ITEMS
+.product-page__inner{
+  display: flex;
+}
+.product-page__aside{
+  margin-right: 30px;
+}
+.aside__item{
+  background-color: #fff;
+  border: 1px solid #dedede;
+  padding: 0px 32px 32px;
+  margin-bottom: 30px;
+  width: 270px;
+}
+
+
+
+
+// END NEW-ITEMS
