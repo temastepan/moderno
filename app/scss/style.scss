@@ -1452,9 +1452,6 @@ button.icon-sort{
   border: 1px solid #dcdcdc;
   margin-bottom: 28px;
 }
-
-
-
 .product-one__more-icons{
   display: flex;
   justify-content: space-between;
@@ -1544,6 +1541,40 @@ button.icon-sort{
   @include f500;
   color: $red;  
 }
+.select__line{
+  .jq-selectbox{
+    width: 100%;    
+  }
+  .jq-selectbox__select {
+    width: 100px;
+    height: 40px;
+    padding: 0px 18px;
+    border: 1px solid #d7d7d7;
+    border-bottom-color: #d7d7d7;
+    border-radius: 0px;
+    background: #f9f9f9;
+    box-shadow: none;
+    font-family: 'Roboto-Regular', sans-serif;
+    color: #707070;
+    text-shadow: none;
+    line-height: 40px;
+  }
+  .jq-selectbox__trigger-arrow{
+    border: none;
+    top: 0;
+    right: 20px;
+    line-height: 40px;
+    font-size: 15px;
+    &::before{
+      content: "\f0d7";
+      font-family: 'icomoon';
+      color: $green;
+    }
+  }
+  .jq-selectbox__trigger{
+    border-left: none;
+  }
+}  
 .product__price{
   button{
     margin-bottom: 7px;
@@ -1662,7 +1693,7 @@ button.icon-sort{
   span{
     color: $bg;
     @include f500;
-  }
+  }  
 }
 
 // END PRODUCT-ONE
